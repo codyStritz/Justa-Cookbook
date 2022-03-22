@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search_btn"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/filter_btn"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/filter"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/appetizers_filter_btn"
+                android:title="@string/appetizers" />
+            <item
+                android:id="@+id/soups_salads_filter_btn"
+                android:title="@string/soups_amp_salads" />
+            <item
+                android:id="@+id/side_dishes_filter_btn"
+                android:title="@string/side_dishes" />
+            <item
+                android:id="@+id/main_dish_filter_btn"
+                android:title="@string/main_dishes" />
+            <item
+                android:id="@+id/snacks_filter_btn"
+                android:title="@string/snacks_amp_desserts" />
+            <item
+                android:id="@+id/sauces_filter_btn"
+                android:title="Sauces &amp; Dips"/>
+            <item
+                android:id="@+id/beverages_filter_btn"
+                android:title="@string/beverages" />
+            <item
+                android:id="@+id/other_filter_btn"
+                android:title="Other"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/meal_plan_btn"
+        android:title="@string/my_meal_plan"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/about_btn"
+        android:title="Check it out!"
+        app:showAsAction="never" />
+</menu>

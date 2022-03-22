@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".fragments.recipe.AddNoteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/note_field"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/add_a_note_optional"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textAutoComplete|textCapSentences|textMultiLine"
+                tools:text="Neque gravida in fermentum et sollicitudin ac orci phasellus. Leo urna molestie at elementum eu facilisis. Arcu dictum varius duis at consectetur. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Egestas erat imperdiet sed euismod nisi. Justo donec enim diam vulputate ut pharetra. Venenatis cras sed felis eget velit. Dolor purus non enim praesent elementum facilisis. Eu sem integer vitae justo eget magna fermentum iaculis eu. Arcu odio ut sem nulla pharetra. Nulla porttitor massa id neque aliquam. Varius duis at consectetur lorem donec massa. In mollis nunc sed id semper risus in hendrerit gravida. Velit ut tortor pretium viverra. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Odio pellentesque diam volutpat commodo sed egestas egestas. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Donec massa sapien faucibus et molestie ac feugiat sed." />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="?attr/colorSecondary"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="@id/note_field"
+            app:layout_constraintStart_toStartOf="@id/note_field"
+            app:layout_constraintTop_toBottomOf="@id/note_field" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+

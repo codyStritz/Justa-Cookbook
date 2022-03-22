@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Justa Cookbook</string>
+    <string name="app_label">Cookbook</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipe_name_req">Recipe Name <font color='#FF0000'>*</font></string>
+    <string name="ingredient_name_req">Ingredient Name <font color='#FF0000'>*</font></string>
+    <string name="ingredient_amount_req">Amount (optional)</string>
+    <string name="direction_text">Type out instruction <font color='#FF0000'>*</font></string>
+    <string name="bullet_point">•</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="next">Next</string>
+    <string name="cancel">Cancel</string>
+    <string name="directions">Directions:</string>
+    <string name="add_step">Add Step +</string>
+    <string name="view_shopping_list">View Shopping List</string>
+    <string name="clear_all">Clear All</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="add_ingredient">Add Ingredient +</string>
+    <string name="add_to_meal_plan">Add to meal plan</string>
+    <string name="edit">Edit</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="space"> </string>
+    <string name="clear_meal_plan">Clear Meal Plan?</string>
+    <string name="sure_want_to_clear_meal_plan">Are you sure you want to remove all recipes from your meal plan?</string>
+    <string name="yes_clear_it">Yes, Clear It!</string>
+    <string name="remove_from_meal_plan">Remove from Meal Plan</string>
+    <string name="removed_from_meal_plan">Removed from meal plan</string>
+    <string name="added_to_meal_plan">Added to meal plan</string>
+    <string name="delete_recipe">Delete Recipe?</string>
+    <string name="sure_want_delete_recipe">Are you sure you want to delete this recipe?</string>
+    <string name="yes_delete">Yes, Delete It!</string>
+    <string name="number_of_servings">Number of Servings</string>
+    <string name="servings">Servings:&#160;</string>
+    <string name="filter">Filter</string>
+    <string name="appetizers">Appetizers</string>
+    <string name="soups_amp_salads"><![CDATA[Soups & Salads]]></string>
+    <string name="side_dishes">Side Dishes</string>
+    <string name="main_dishes">Main Dishes</string>
+    <string name="snacks_amp_desserts"><![CDATA[Snacks & Desserts]]></string>
+    <string name="beverages">Beverages</string>
+    <string name="my_meal_plan">My Meal Plan</string>
+    <string name="add_a_note_optional">Add a note (optional)</string>
+    <string name="note">Note:</string>
+    <string name="add_note">add note</string>
+    <string name="search">Search</string>
+    <string name="hi_text"><b>Thank you</b> for trying out my app!</string>
+    <string name="check_them_out">Check them out!</string>
+    <string name="apps_text">If you enjoy this one, please check out some of my other ones!</string>
+    <string name="hi_i_m_the_developer">Hi, I\'m the developer!</string>
+    <string-array name="categories">
+        <item>Appetizers</item>
+        <item>Soups &amp; Salads</item>
+        <item>Side Dishes</item>
+        <item>Main Dishes</item>
+        <item>Snacks &amp; Desserts</item>
+        <item>Sauces &amp; Dips</item>
+        <item>Beverages</item>
+        <item>Other</item>
+    </string-array>
+</resources>

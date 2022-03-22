@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recipeListFragment">
+
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.codystritz.justacookbook.fragments.recipe.RecipeListFragment"
+        android:label="All Recipes"
+        tools:layout="@layout/fragment_recipe_list">
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_addRecipeFragment"
+            app:destination="@id/addRecipeFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_filteredRecipeListFragment"
+            app:destination="@id/filteredRecipeListFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.codystritz.justacookbook.fragments.recipe.RecipeDetailFragment"
+        android:label="Recipe Details"
+        tools:layout="@layout/fragment_recipe_detail">
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_addRecipeFragment"
+            app:destination="@id/addRecipeFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <argument
+            android:name="recipe_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecipeFragment"
+        android:name="com.codystritz.justacookbook.fragments.recipe.AddRecipeFragment"
+        android:label="Recipe Name"
+        tools:layout="@layout/fragment_add_recipe">
+        <action
+            android:id="@+id/action_addRecipeFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+        <argument
+            android:name="recipe_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addRecipeFragment_to_ingredientsListFragment"
+            app:destination="@id/ingredientsListFragment" />
+        <argument
+            android:name="isEdit"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIngredientFragment"
+        android:name="com.codystritz.justacookbook.fragments.ingredient.AddIngredientFragment"
+        android:label="{add_edit} Ingredient"
+        tools:layout="@layout/fragment_add_ingredient">
+        <argument
+            android:name="recipe_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="ingredient_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="add_edit"
+            android:defaultValue="Add"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientsListFragment"
+        android:name="com.codystritz.justacookbook.fragments.ingredient.IngredientsListFragment"
+        android:label="Ingredients"
+        tools:layout="@layout/fragment_ingredients_list">
+        <action
+            android:id="@+id/action_ingredientsListFragment_to_addIngredientFragment"
+            app:destination="@id/addIngredientFragment" />
+        <action
+            android:id="@+id/action_ingredientsListFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+        <action
+            android:id="@+id/action_ingredientsListFragment_to_addRecipeFragment"
+            app:destination="@id/addRecipeFragment"
+            app:popUpTo="@id/addRecipeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ingredientsListFragment_to_directionListFragment"
+            app:destination="@id/directionListFragment" />
+        <argument
+            android:name="recipe_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="isEdit"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/directionListFragment"
+        android:name="com.codystritz.justacookbook.fragments.direction.DirectionListFragment"
+        android:label="Directions"
+        tools:layout="@layout/fragment_direction_list">
+        <argument
+            android:name="recipe_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_directionListFragment_to_ingredientsListFragment"
+            app:destination="@id/ingredientsListFragment" />
+        <action
+            android:id="@+id/action_directionListFragment_to_addDirectionFragment"
+            app:destination="@id/addDirectionFragment" />
+        <argument
+            android:name="isEdit"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_directionListFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDirectionFragment"
+        android:name="com.codystritz.justacookbook.fragments.direction.AddDirectionFragment"
+        android:label="{add_edit} Step"
+        tools:layout="@layout/fragment_add_direction">
+        <action
+            android:id="@+id/action_addDirectionFragment_to_directionListFragment"
+            app:destination="@id/directionListFragment" />
+        <argument
+            android:name="recipe_id"
+            app:argType="integer" />
+        <argument
+            android:name="direction_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="add_edit"
+            android:defaultValue="Add"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/filteredRecipeListFragment"
+        android:name="com.codystritz.justacookbook.fragments.recipe.FilteredRecipeListFragment"
+        android:label="{category}"
+        tools:layout="@layout/fragment_filtered_recipe_list">
+        <argument
+            android:name="category"
+            android:defaultValue="My Meal Plan"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_filteredRecipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+        <argument
+            android:name="isMealPlan"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_filteredRecipeListFragment_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.codystritz.justacookbook.fragments.ingredient.ShoppingListFragment"
+        android:label="Shopping List"
+        tools:layout="@layout/fragment_shopping_list" />
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.codystritz.justacookbook.fragments.recipe.AddNoteFragment"
+        android:label="Note"
+        tools:layout="@layout/fragment_add_note">
+        <action
+            android:id="@+id/action_addNoteFragment_to_directionListFragment"
+            app:destination="@id/directionListFragment" />
+        <action
+            android:id="@+id/action_addNoteFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/recipeDetailFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addNoteFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment"
+            app:popUpTo="@id/recipeListFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="recipe_id"
+            app:argType="integer" />
+        <argument
+            android:name="isEdit"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.codystritz.justacookbook.fragments.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+</navigation>
